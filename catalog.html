@@ -27,53 +27,59 @@
           </ul>
         </nav>
 
-       <div class="right-side">
-         <button>Search</button>
-         <div class="search">
-           <label>Что ищем?</label>
-           <input type="search" name="search" id="b">
-         </div>
-         <button>Вход</button>
-         <form>
-           <p>
-             <label for="email-enter"></label>
-             <input type="email" id="email-enter" name="email-enter" value="Электронная почта">
+        <div class="right-side">
+          <button type="button">Search</button>
+          <form class="search">
+            <label id="b">
+              Что ищем?
+              <input type="search" name="search" id="b">
+            </label>
+          </form>
+          <button type="button">Вход</button>
+          <form class="enter" method="post" action="#">
+            <p>
+              <label class="visually-hidden" for="email-enter">Электронная почта</label>
+              <input type="email" id="email-enter" name="email" placeholder="Электронная почта">
+            </p>
+            <p>
+              <label class="visually-hidden" for="password">Пароль</label>
+              <input type="password" id="password" name="password" placeholder="Пароль">
+            </p>
+            <p>
+              <button type="submit">Войти</button>
+              <a href="#">Забыли пароль?</a>
+              <a href="#">Новая регистрация</a>
            </p>
-           <p>
-             <label for="password"></label>
-             <input type="password" id="password" name="password" value="Пароль">
-           </p>
-           <button type="submit">Войти</button>
-           <a href="#">Забыли пароль?</a>
-           <a href="#">Новая регистрация</a>
-         </form>
-       <button>2 товара</button>
-       <tabel>
-         <tr>
-           <td><span>X</span></td>
-           <td><img src="img/1.jpg" alt="Пломбир с апельсиновым джемом"></td>
-           <td><span>Пломбир с апельсиновым джемом</span></td>
-           <td><span>1,5кг х 200 руб.</span></td>
-           <td><span>300 руб.</span></td>
-         </tr>
-         <tr>
-           <td><span>X</span></td>
-           <td><img src="img/3.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада"></td>
-           <td><span>Клубничный пломбир с присыпкой из белого шоколада</span></td>
-           <td><span>1,5кг х 300 руб.</span></td>
-           <td><span>450 руб.</span></td>
-         </tr>
-       </tabel>
-       <p>
-         <span>Итого:</span>
-         <span>750 руб.</span>
-         <a href="#">Оформить заказ</a>
-       </p>
-       <p class="contact-header">
-         <span>С 10 до 20, ежедневно</span>
-         <span>8 812 450-25-25</span>
-       </p>
-    </div>
+          </form>
+          <button type="button">2 товара</button>
+          <div class="order">
+            <ul>
+              <li>
+                <button type="button">Закрыть</button>
+                <img src="img/1.jpg" alt="Пломбир с апельсиновым джемом">
+                <span>Пломбир с апельсиновым джемом</span>
+                <span>1,5кг х</span><span> 200 руб.</span>
+                <span>300 руб.</span>
+              </li>
+              <li>
+                <button type="button">Закрыть</button>
+                <img src="img/3.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада">
+                <span>Клубничный пломбир с присыпкой из белого шоколада</span>
+                <span>1,5кг х</span><span> 300 руб.</span>
+                <span>450 руб.</span>
+              </li>
+            </ul>
+            <p>
+              <span>Итого:</span>
+              <span>750 руб.</span>
+              <a class="btn" href="#">Оформить заказ</a>
+            </p>
+          </div>
+          <p class="contact-header">
+           <span>С 10 до 20, ежедневно</span>
+           <span>8 812 450-25-25</span>
+         </p>
+     </div>
     </header>
 
     <main class="container">
@@ -88,7 +94,63 @@
 
      <section class="filters">
        <h2>Сливочное мороженое</h2>
-       <form>
+       <form method="get" action="#">
+         <p>
+           <label for="sorting">Сортировка:</label>
+           <select name="sorting" id="sorting">
+             <option selected>По популярности</option>
+             <option>Сначала недорогие</option>
+             <option>Сначала дорогие</option>
+             <option>По жирности</option>
+           </select>
+         </p>
+         <p>
+           <label for="price-sorting">Цена: 100 руб. – 500 руб.</label>
+           <input type="range" id="price-sorting" name="price-sorting">
+         </p>
+         <figure class="fats">
+           <figcaption>Жирность:</figcaption>
+           <label for="0">
+             0%
+             <input type="radio" name="fat" value="0%" id="0">
+           </label>
+           <label for="10">
+             до 10%
+             <input type="radio" name="fat" value="10%" id="10">
+           </label>
+           <label for="30">
+             до 30%
+             <input type="radio" name="fat" value="30%" id="30">
+           </label>
+           <label for="more-30">
+             выше 30%
+             <input type="radio" name="fat" value="more-30" id="more-30">
+           </label>
+         </figure>
+         <figure class="filler">
+           <figcaption>Наполнитель:</figcaption>
+           <label for="shocolat">
+             <input type="checkbox" name="shocolat" id="shocolat" checked>
+             Шоколадные
+           </label>
+           <label for="sugar">
+             <input type="checkbox" name="sugar" id="sugar" checked>
+             Cахарные присыпки
+           </label>
+           <label for="fruits">
+             <input type="checkbox" name="fruits" id="fruits">
+             Фрукты
+           </label>
+           <label for="syrup">
+             <input type="checkbox" name="syrup" id="syrup">
+             Cиропы
+           </label>
+           <label for="jam">
+             <input type="checkbox" name="jam" id="jam">
+             Джемы
+           </label>
+         </figure>
+         <button type="submit">Применить</button>
        </form>
      </section>
 
@@ -107,7 +169,7 @@
                </p>
                <a href="#"><h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3></a>
              </a>
-            <button class="btn">Быстрый просмотр</button>
+            <button class="btn" type="button">Быстрый просмотр</button>
            </article>
          </li>
          <li class="item-product">
@@ -120,7 +182,7 @@
                </p>
                <a href="#"><h3>Сливочно-кофейное с кусочками шоколада</h3></a>
              </a>
-            <button class="btn">Быстрый просмотр</button>
+            <button class="btn" type="button">Быстрый просмотр</button>
            </article>
          </li>
          <li class="item-product">
@@ -133,7 +195,7 @@
                </p>
                <a href="#"><h3>Сливочно-клубничное с присыпкой из белого шоколада</h3></a>
              </a>
-            <button class="btn">Быстрый просмотр</button>
+            <button class="btn" type="button">Быстрый просмотр</button>
            </article>
          </li>
          <li class="item-product">
@@ -146,7 +208,7 @@
                </p>
                <a href="#"><h3>Сливочное крем-брюле с карамельной подливкой</h3></a>
              </a>
-            <button class="btn">Быстрый просмотр</button>
+            <button class="btn" type="button">Быстрый просмотр</button>
            </article>
          </li>
          <li class="item-product">
@@ -159,7 +221,7 @@
                </p>
                <a href="#"><h3>Сливочное с брусничным джемом</h3></a>
              </a>
-            <button class="btn">Быстрый просмотр</button>
+            <button class="btn" type="button">Быстрый просмотр</button>
            </article>
          </li>
          <li class="item-product">
@@ -172,7 +234,7 @@
                </p>
                <a href="#"><h3>Сливочно-черничное с цельными ягодами черники</h3></a>
              </a>
-            <button class="btn">Быстрый просмотр</button>
+            <button class="btn" type="button">Быстрый просмотр</button>
            </article>
          </li>
          <li class="item-product">
@@ -185,7 +247,7 @@
                </p>
                <a href="#"><h3>Сливочно-лимонное с карамельной присыпкой</h3></a>
              </a>
-            <button class="btn">Быстрый просмотр</button>
+            <button class="btn" type="button">Быстрый просмотр</button>
            </article>
          </li>
          <li class="item-product">
@@ -198,7 +260,7 @@
                </p>
                <a href="#"><h3>Сливочное с шоколадной стружкой</h3></a>
              </a>
-            <button class="btn">Быстрый просмотр</button>
+            <button class="btn" type="button">Быстрый просмотр</button>
            </article>
          </li>
          <li class="item-product">
@@ -211,7 +273,7 @@
                </p>
                <a href="#"><h3>Сливочно-ванильное с кусочками шоколада</h3></a>
              </a>
-            <button class="btn">Быстрый просмотр</button>
+            <button class="btn" type="button">Быстрый просмотр</button>
            </article>
          </li>
          <li class="item-product">
@@ -224,7 +286,7 @@
                </p>
                <a href="#"><h3>Сливочноe с ментоловым сиропом</h3></a>
              </a>
-            <button class="btn">Быстрый просмотр</button>
+            <button class="btn" type="button">Быстрый просмотр</button>
            </article>
          </li>
          <li class="item-product">
@@ -237,7 +299,7 @@
                </p>
                <a href="#"><h3>Сливочное с кусочками черного шоколада</h3></a>
              </a>
-            <button class="btn">Быстрый просмотр</button>
+            <button class="btn" type="button">Быстрый просмотр</button>
            </article>
          </li>
          <li class="item-product">
@@ -250,7 +312,7 @@
                </p>
                <a href="#"><h3>Сливочное с мятным сиропом</h3></a>
              </a>
-            <button class="btn">Быстрый просмотр</button>
+            <button class="btn" type="button">Быстрый просмотр</button>
            </article>
          </li>
        </ul>

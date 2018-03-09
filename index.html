@@ -8,7 +8,7 @@
     <header class="main-header">
 
       <nav class="main-navigation">
-        <a class="main-header-logo" href="#">
+        <a class="main-header-logo" href="/">
           <img src="img/logo.png" alt="Gllasy-shop" width="164" height="79">
         </a>
         <ul class="cite-navigation">
@@ -28,24 +28,28 @@
       </nav>
 
      <div class="right-side">
-       <button>Search</button>
-       <div class="search">
-         <label>Что ищем?</label>
-         <input type="search" name="search" id="b">
-       </div>
-       <button>Вход</button>
-       <form>
+       <button type="button">Search</button>
+       <form class="search">
+         <label id="b">
+           Что ищем?
+           <input type="search" name="search" id="b">
+         </label>
+       </form>
+       <button type="button">Вход</button>
+       <form class="enter" method="post" action="#">
          <p>
-           <label for="email-enter"></label>
-           <input type="email" id="email-enter" name="email-enter" value="Электронная почта">
+           <label class="visually-hidden" for="email-enter">Электронная почта</label>
+           <input type="email" id="email-enter" name="email" placeholder="Электронная почта">
          </p>
          <p>
-           <label for="password"></label>
-           <input type="password" id="password" name="password" value="Пароль">
+           <label class="visually-hidden" for="password">Пароль</label>
+           <input type="password" id="password" name="password" placeholder="Пароль">
          </p>
-         <button type="submit">Войти</button>
-         <a href="#">Забыли пароль?</a>
-         <a href="#">Новая регистрация</a>
+         <p>
+           <button type="submit">Войти</button>
+           <a href="#">Забыли пароль?</a>
+           <a href="#">Новая регистрация</a>
+        </p>
        </form>
      <a href="basket.html">Пусто</a>
      <p class="contact-header">
@@ -122,7 +126,7 @@
                 </p>
                 <a href="#"><h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3></a>
               </a>
-             <button class="btn">Быстрый просмотр</button>
+             <button class="btn" type="button">Быстрый просмотр</button>
             </article>
           </li>
           <li class="item-product">
@@ -136,7 +140,7 @@
                 </p>
                 <a href="#"><h3>Сливочно-кофейное с кусочками шоколада</h3></a>
               </a>
-             <button class="btn">Быстрый просмотр</button>
+             <button class="btn" type="button">Быстрый просмотр</button>
             </article>
           </li>
           <li class="item-product">
@@ -150,7 +154,7 @@
                 </p>
                 <a href="#"><h3>Сливочно-клубничное с присыпкой из белого шоколада</h3></a>
               </a>
-             <button class="btn">Быстрый просмотр</button>
+             <button class="btn" type="button">Быстрый просмотр</button>
             </article>
           </li>
           <li class="item-product">
@@ -164,7 +168,7 @@
                 </p>
                 <a href="#"><h3>Сливочное крем-брюле с карамельной подливкой</h3></a>
               </a>
-             <button class="btn">Быстрый просмотр</button>
+             <button class="btn" type="button">Быстрый просмотр</button>
             </article>
           </li>
         </ul>
@@ -200,24 +204,27 @@
 
         <h2 class="visually-hidden">Подписка</h2>
 
-        <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
-        <input type="email" name="email">
-        <button type="submit">Отправить</button>
+        <form class="" method="post" action="#">
+          <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
+          <label for="email-subscription">
+            <input type="email" name="email" id="email-subscription" placeholder="Электронная почта">
+          </label>
+          <button type="submit">Отправить</button>
+        </form>
       </section>
 
       <section class="map">
 
         <h2 class="visually-hidden">Карта</h2>
 
-        <img src="img/Layer3.png" alt="Карта">
-        <div class="point-map"></div>
+        <img src="img/Layer3.png" alt="Адрес главного офиса и офлайн магазина: ул. Большая Конюшенная 19/8, Санкт-Петербург">
         <p class="address-map">
           <p>Адрес главного офиса и офлайн магазина: </p>
           <strong>ул. Большая Конюшенная 19/8, Санкт-Петербург</strong>
           <span>Для заказов по телефону: </span>
           <strong>8 812 450-25-25 </strong>
           <span>(с 10 до 20 ежедневно)</span>
-          <button>Форма обратной связи</button>
+          <button type="button">Форма обратной связи</button>
         </p>
       </section>
     </main>
@@ -252,22 +259,22 @@
       <h2 class="visually-hidden">Обратная связь</h2>
 
       <b>Мы обязательно вам ответим!</b>
-      <span>X</span>
-      <form method="post">
+      <form method="post" action="#">
         <p>
           <label for="user-name">Как вас зовут?</label>
-          <input type="text" name="user-name" id="user-name" value="Как вас зовут?">
+          <input type="text" name="user-name" id="user-name" placeholder="Как вас зовут?">
         </p>
         <p>
-          <label for="email">Ваша почта для ответа?</label>
-          <input type="email" name="email" id="email" value="Ваша почта для ответа?">
+          <label for="email-feedback">Ваша почта для ответа?</label>
+          <input type="email" name="email" id="email-feedback" placeholder="Ваша почта для ответа?">
         </p>
         <p>
           <label for="comment">Напишите что-нибудь...</label>
-          <input type="text" name="comment" id="comment" value="Напишите что-нибудь...">
+          <input type="text" name="comment" id="comment" placeholder="Напишите что-нибудь...">
         </p>
         <button type="submit">Отправить</button>
       </form>
+      <button type="button">Закрыть</button>
     </section>
   </body>
 </html>
