@@ -1,0 +1,87 @@
+header {
+ border: 1px solid red;
+}
+
+.main-navigation {
+  border: 1px solid green;
+}
+.main-header-logo {
+border: 1px solid red;
+}
+.cite-navigation {
+border: 1px solid orange;
+}
+.item-cite {
+border: 1px solid pink;
+}
+
+.list-offer{
+  border: 1px solid pink;
+}
+
+.item-offer {
+  border: 1px solid blue;
+}
+
+.img-offer{
+  border: 1px solid blue;
+}
+
+.description-offer-1 {
+  border: 1px solid pink;
+}
+
+.description-offer-2 {
+  border: 1px solid green;
+}
+
+.both-offer {
+  border: 1px solid red;
+}
+
+.list-button {
+  border: 1px solid blue;
+}
+
+.right-side {
+  border: 1px solid blue;
+}
+
+.advantage-description  {
+  border: 1px solid blue;
+}
+
+.item-advantage {
+  border: 1px solid red;
+}
+
+.offer-header {
+  border: 1px solid yellow;
+
+}
+
+.copyright {
+    border: 1px solid yellow;
+}
+
+.copyright img {
+  border: 1px solid green;
+  }
+  .button-enter {
+    border: 1px solid green;
+}
+
+.container {
+   border: 1px solid green;
+}
+
+.advertisement {
+   border: 1px solid red;
+}
+
+.visually-hidden {
+  display: none;
+}
+.gallery {
+ border: 1px solid red;
+}
