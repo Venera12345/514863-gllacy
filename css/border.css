@@ -2,14 +2,30 @@ header {
  border: 1px solid red;
 }
 
-.main-navigation {
+.left-side {
   border: 1px solid green;
+}
+
+.social-list {
+  border: 1px solid red;
+}
+
+.social-item {
+  border: 1px solid pink;
+
+}
+.social-item-link {
+    border: 1px solid green;
+}
+.top-header {
+  border: 1px solid red;
 }
 .main-header-logo {
 border: 1px solid red;
 }
 .cite-navigation {
-border: 1px solid orange;
+  border: 1px solid pink;
+
 }
 .item-cite {
 border: 1px solid pink;
@@ -79,8 +95,8 @@ border: 1px solid pink;
    border: 1px solid red;
 }
 
-.visually-hidden {
-  display: none;
+.menu-footer-item {
+     border: 1px solid red;
 }
 .gallery {
  border: 1px solid red;
