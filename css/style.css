@@ -57,6 +57,8 @@ body {
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
+  padding-left: 26px;
+  padding-right: 26px;
 }
 .row {
   display: flex;
@@ -402,4 +404,147 @@ body {
 .contact-tel {
   font-size: 22px;
   line-height: 24px;
+}
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  margin: 0 auto;
+  margin-top: -120px;
+  padding: 0;
+
+  width: 100%;
+}
+.slider .list-sliders {
+  display: flex;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+.slider .item-slide {
+  position: relative;
+}
+.slider .slide-2,
+.slider .slide-3 {
+  display: none;
+}
+.name-slide {
+  width: 670px;
+
+  position: absolute;
+  top: 45%;
+  left: 19%;
+
+  margin: 0;
+  padding: 0;
+
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+.both-slide {
+  padding: 11px 41px;
+
+  position: absolute;
+  top: 62%;
+  left: 38%;
+
+  font-size: 32px;
+  line-height: 44px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+
+  border-radius: 50px;
+}
+.list-button-slide {
+  display: flex;
+  align-self: flex-start;
+
+  position: absolute;
+  top: 65%;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+.item-button-slide {
+  margin-right: 8px;
+
+  width: 19px;
+  height: 19px;
+
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.item-button-slide.active {
+  background-color: #fff;
+}
+.button-none {
+  display: none;
+}
+.sentence {
+  margin-top: -234px;
+}
+.list-sentences {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+
+  list-style: none;
+}
+.item-sentence {
+  padding: 23px 20px;
+  padding-bottom: 26px;
+
+  width: calc(100%/2 - 26px);
+  box-sizing: border-box;
+
+  border-radius: 20px;
+  background-color: #b52a56;
+  background-image: url('../img/Малиновый-фон.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.item-sentence:last-child {
+  background-image: url('../img/Шоколадный фон.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.name-sentence {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
+
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: 700;
+  color: #fff;
+}
+.description-sentence {
+  margin: 0;
+  margin-bottom: 45px;
+  padding: 0;
+
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+.add-filler {
+  margin-left: 332px;
+
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+
+  border-radius: 50px;
 }
