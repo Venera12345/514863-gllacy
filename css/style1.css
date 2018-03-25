@@ -151,35 +151,7 @@ body {
   background-color: #fff;
 }
 
-.cite-navigation a:focus {
-  color: #333;
-  text-decoration: none;
 
-  background-color: #fff;
-}
-
-.sub-menu a {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  color: #333;
-  text-decoration: none;
-}
-
-.sub-menu .new a {
-  font-weight: 700;
-}
-
-.sub-menu a:hover,
-.sub-menu a:focus,
-.sub-menu a:active {
-   color: #333;
-}
-
-.right-side {
-  width: calc(100% / 4 - 26px);
-
-}
 
 .button-search {
   display: inline-block;

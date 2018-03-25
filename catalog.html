@@ -7,87 +7,118 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
-    <header class="main-header">
+  <body class="fon-1">
 
-      <nav class="main-navigation">
-        <a class="main-header-logo" href="/">
-          <img class="logo-img" src="img/logo.svg" alt="Gllasy-shop" width="154" height="64">
-        </a>
-        <ul class="cite-navigation">
-          <li class="item-cite">
-            <a class="cite-link" href="catalog.html">Каталог</a>
-            <ul class="sub-menu">
-              <li class="sub-menu-item new"><a class="sub-menu-link" href="catalog.html">Новинки</a></li>
-              <li class="sub-menu-item"><a class="sub-menu-link" href="catalog.html">Сливочное</a></li>
-              <li class="sub-menu-item"><a class="sub-menu-link" href="catalog.html">Щербеты</a></li>
-              <li class="sub-menu-item"><a class="sub-menu-link" href="catalog.html">Фруктовый лёд</a></li>
-              <li class="sub-menu-item"><a class="sub-menu-link" href="catalog.html">Мелорин</a></li>
+    <header class="header wrapper">
+      <div class="row">
+        <div class="left-side">
+          <nav class="cite-navigation container">
+            <a href="/" class="logo">
+             <img src="img/logo.svg" alt="logo" class="logo-img">
+            </a>
+            <ul class="list-menu">
+              <li class="item-menu"><a href="#" class="linck-item-menu">Каталог</a>
+                <ul class="list-sub-menu">
+                  <li class="item-sub-menu"><a href="#" class="linck-sub-menu">Новинки</a></li>
+                  <li class="item-sub-menu"><a href="#" class="linck-sub-menu">Сливочное</a></li>
+                  <li class="item-sub-menu"><a href="#" class="linck-sub-menu">Щербеты</a></li>
+                  <li class="item-sub-menu"><a href="#" class="linck-sub-menu">Фруктовый лёд</a></li>
+                  <li class="item-sub-menu"><a href="#" class="linck-sub-menu">Мелорин</a></li>
+                </ul>
+              </li>
+              <li class="item-menu"><a href="#" class="linck-item-menu">Доставка и оплата</a></li>
+              <li class="item-menu"><a href="#" class="linck-item-menu">О компании</a></li>
             </ul>
-          </li>
-          <li class="item-cite"><a class="cite-link" href="delivery.html">Доставка и оплата</a></li>
-          <li class="item-cite"><a class="cite-link" href="about-company.html">О компании</a></li>
-        </ul>
-      </nav>
-
-     <div class="right-side">
-       <button class="button-search" type="button">Search</button>
-       <form class="search">
-         <label class="search-description">
-           Что ищем?
-           <input type="search" name="search">
-         </label>
-       </form>
-       <a class="button-enter" href="#">Вход</a>
-       <form class="enter" method="post" action="#">
-         <p class="enter-email">
-           <label class="visually-hidden" for="email-enter">Электронная почта</label>
-           <input type="email" id="email-enter" name="email" placeholder="Электронная почта">
-         </p>
-         <p class="enter-password">
-           <label class="visually-hidden" for="password">Пароль</label>
-           <input type="password" id="password" name="password" placeholder="Пароль">
-         </p>
-         <p class="user-enter">
-           <button class="btn user-enter-button" type="submit">Войти</button>
-           <a class="link-password-recovery" href="#">Забыли пароль?</a>
-           <a class="link-new-check-in" href="#">Новая регистрация</a>
-        </p>
-       </form>
-      <button class="" type="button">2 товара</button>
-      <div class="order">
-        <ul class="order-list">
-          <li class="item-order">
-            <button class="close-up" type="button">Закрыть</button>
-            <img classe="img-order" src="img/1.jpg" alt="Пломбир с апельсиновым джемом">
-            <span class="name-order">Пломбир с апельсиновым джемом</span>
-            <span class="order-quantity">1,5кг х</span>
-            <span class="order-price"> 200 руб.</span>
-            <span class="order-amount">300 руб.</span>
-          </li>
-          <li class="item-order">
-            <button class="close-up" type="button">Закрыть</button>
-            <img classe="img-order" src="img/3.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада">
-            <span class="name-order">Клубничный пломбир с присыпкой из белого шоколада</span>
-            <span class="order-quantity">1,5кг х</span>
-            <span class="order-price"> 300 руб.</span>
-            <span class="order-amount">450 руб.</span>
-          </li>
-        </ul>
-        <p class="order-totals">
-          <span class="totals-name">Итого:</span>
-          <span class="totals-amount">750 руб.</span>
-          <a class="btn ordering" href="#">Оформить заказ</a>
-        </p>
+          </nav>
+        </div>
+        <div class="right-side">
+          <div class="search">
+            <button type="button" class="search-button">
+              Поиск
+              <svg version="1.1" x="0px" y="0px" width="17px"
+              	 height="17px" viewBox="0 0 17 17" enable-background="new 0 0 17 17" xml:space="preserve">
+              	<path fill="#FFFFFF" d="M16.958,15.527L11.75,10.32C12.533,9.247,13,7.93,13,6.5C13,2.91,10.09,0,6.5,0S0,2.91,0,6.5
+              		S2.91,13,6.5,13c1.438,0,2.763-0.473,3.839-1.263l5.205,5.204L16.958,15.527z M6.5,11C4.019,11,2,8.981,2,6.5S4.019,2,6.5,2
+              		S11,4.019,11,6.5S8.981,11,6.5,11z"/>
+              </svg>
+            </button>
+            <form action="#" method="get" class="search-form">
+              <label class="visually-hidden">Что ищем?</label>
+              <input type="text" name="search" placeholder="Что ищем?">
+            </form>
+          </div>
+          <div class="sign">
+            <a href="#" class="sign-button">
+              <svg class="img-sign" version="1.1" id="Layer_1" x="0px" y="0px"
+              	 width="21px" height="19px" viewBox="0 0 21 19" enable-background="new 0 0 21 19" xml:space="preserve">
+              	<polygon fill="#FFFFFF" points="6,14.875 12.917,9.5 6,4.125 6,7.042 -0.042,7.042 -0.042,11.959 6,11.959 	"/>
+              	<path fill="#FFFFFF" d="M18,0H5C3.9,0,3,0.9,3,2v2h2V2h13v15H5v-2H3v2c0,1.1,0.9,2,2,2h13c1.1,0,2-0.9,2-2V2C20,0.9,19.1,0,18,0z"
+              		/>
+              </svg>
+              Вход
+            </a>
+            <form class="sign-form" method="post" action="#">
+              <p class="sign-email">
+                <label class="visually-hidden" for="email-sign">Электронная почта</label>
+                <input type="email" id="email-sign" name="email" placeholder="Электронная почта">
+              <p>
+              <p class="sign-pass">
+                <label class="visually-hidden" for="pass">Пароль</label>
+                <input type="password" id="pass" name="password" placeholder="Пароль">
+              </p>
+              <button class="btn sign-submit" type="submit">Войти</button>
+              <p class="sing-user">
+                <a class="link-user" href="#">Забыли пароль?</a>
+                <a class="link-check-in" href="#">Новая регистрация</a>
+             </p>
+            </form>
+          </div>
+          <div>
+            <a href="#" class="basket">
+             <svg class="img-basket" version="1.1" x="0px" y="0px"
+            	 width="21px" height="20px" viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
+               <path fill="#FFFFFF" d="M5.657,2.031L5.422,0H0v2h3.64l1.5,13h13.988l1.699-12.969H5.657z M17.372,13H6.922L5.888,4.031h12.66
+             		L17.372,13z"/>
+             	<circle fill="#FFFFFF" cx="6.984" cy="18" r="2"/>
+             	<circle fill="#FFFFFF" cx="15.984" cy="18" r="2"/>
+            </svg>
+            2 товара
+          </a>
+            <div class="order">
+              <ul class="order-list">
+                <li class="item-order">
+                  <button class="close-up" type="button">Закрыть</button>
+                  <img classe="img-order" src="img/1.jpg" alt="Пломбир с апельсиновым джемом">
+                  <span class="name-order">Пломбир с апельсиновым джемом</span>
+                  <span class="order-quantity">1,5кг х</span>
+                  <span class="order-price"> 200 руб.</span>
+                  <span class="order-amount">300 руб.</span>
+                </li>
+                <li class="item-order">
+                  <button class="close-up" type="button">Закрыть</button>
+                  <img classe="img-order" src="img/3.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада">
+                  <span class="name-order">Клубничный пломбир с присыпкой из белого шоколада</span>
+                  <span class="order-quantity">1,5кг х</span>
+                  <span class="order-price"> 300 руб.</span>
+                  <span class="order-amount">450 руб.</span>
+                </li>
+              </ul>
+              <p class="order-totals">
+                <span class="totals-name">Итого:</span>
+                <span class="totals-amount">750 руб.</span>
+                <a class="btn ordering" href="#">Оформить заказ</a>
+              </p>
+            </div>
+        </div>
+          <p class="contact-header">
+            <span class="contact-time">С 10 до 20, ежедневно</span>
+            <span class="contact-tel">8 812 450-25-25</span>
+          </p>
+        </div>
       </div>
-      <p class="contact-header">
-        <span class="contact-time">С 10 до 20, ежедневно</span>
-        <span class="contact-tel">8 812 450-25-25</span>
-      </p>
-     </div>
     </header>
 
-    <main class="container">
+    <main class="wrapper">
 
       <h1 class="visually-hidden">Каталог</h1>
 
@@ -184,7 +215,7 @@
 
        <h2 class="visually-hidden">Каталог</h2>
 
-       <ul class="list-product">
+       <ul class="list-products">
          <li class="item-product">
            <article class="product">
              <a class="link-img-product" href="catalog.html">
@@ -377,30 +408,32 @@
      </section>
     </main>
 
-    <footer class="main-footer">
-      <div class="social">
-        <ul class="social-list">
-          <li class="social-item tweeter"><a href="#">Твитер</a></li>
-          <li class="social-item instagram"><a href="#">Инстаграм</a></li>
-          <li class="social-item fasebook"><a href="#">Фейсбук</a></li>
-          <li class="social-item vk"><a href="#">ВК</a></li>
-        </ul>
-      </div>
+    <footer class="footer wrapper">
+      <div class="row">
 
-      <ul class="menu-footer">
-        <li class="menu-footer-item"><a class="footer-menu-link" href="about-company.html">Для поставщиков</a></li>
-        <li class="menu-footer-item"><a class="footer-menu-link" href="about-company.html">О производстве</a></li>
-        <li class="menu-footer-item"><a class="footer-menu-link" href="about-company.html">Наши документы</a></li>
-        <li class="menu-footer-item"><a class="footer-menu-link" href="about-company.html">Экологические стандарты</a></li>
+        <ul class="social-list">
+          <li class="social-item tweeter"><a class="social-item-link visually-hidden" href="#">Твитер</a></li>
+          <li class="social-item instagram"><a class="social-item-link visually-hidden" href="#">Инстаграм</a></li>
+          <li class="social-item fasebook"><a class="social-item-link visually-hidden" href="#">Фейсбук</a></li>
+          <li class="social-item vk"><a class="social-item-link visually-hidden" href="#">ВК</a></li>
+        </ul>
+
+      <ul class="list-menu">
+        <li class="menu-item"><a class="menu-link like" href="about-company.html">Для поставщиков</a></li>
+        <li class="menu-item"><a class="menu-link" href="about-company.html">Наши документы</a></li>
+        <li class="menu-item"><a class="menu-link" href="about-company.html">О производстве</a></li>
+        <li class="menu-item"><a class="menu-link" href="about-company.html">Экологические стандарты</a></li>
       </ul>
 
-      <p class="copyright">
+      <div class="copyright">
         <img class="img-logo-footer" src="img/logo-htmlacademy-small.svg" alt="HTML-Academy">
-        <span class="text-copyright">Сделано в</span>
-        <a class="link-copyright" href="https://htmlacademy.ru"> HTML Academy</a>
-        <span class="year-copyright"> © 2016</span>
-      </p>
+        <p class="text-copyright">
+          Сделано в
+         <a class="link-copyright" href="https://htmlacademy.ru"> HTML Academy </a>
+         © 2017
+       </p>
+      </div>
+    </div>
     </footer>
-
   </body>
 </html>
