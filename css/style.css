@@ -10,7 +10,7 @@ body {
 	clip: rect(0 0 0 0);
 	height: 1px;
 	width: 1px;
-	margin: -1px;
+	margpx;
 	padding: 0;
 	border: 0;
 }
@@ -77,7 +77,7 @@ body {
 }
 .header .logo {
   margin-top: 9px;
-  margin-right: 14px;
+  margin-right: 10px;
 
   text-decoration: none;
 }
@@ -86,6 +86,7 @@ body {
   flex-wrap: wrap;
   align-items: baseline;
   margin: 0;
+  margin-top: 30px;
   padding: 0;
 
   position: relative;
@@ -95,33 +96,10 @@ body {
 .header .item-menu {
   margin: 0;
   padding: 0;
-  margin-right: 7px;
-  margin-top: 15px;
-  padding: 7px 15px;
 }
-.header .item-menu .linck-item-menu:first-child {
-  margin-right: 0px;
-}
-.header .item-menu:hover,
-.header .item-menu:focus {
-  background-color: #f7f6f3;
-  border-radius: 20px;
-}
-.header .item-menu:hover .linck-item-menu,
-.header .item-menu:focus .linck-item-menu{
-  color: #333;
-  border: none;
-}
-.header .item-menu:hover .list-sub-menu,
-.header .item-menu:focus .list-sub-menu {
-  display: block;
-}
-.header .item-menu .linck-item-menu:active {
-  padding: 7px 15px;
-  border-radius: 20px;
-  box-shadow: inset 0px 2px 1px #696969;
-}
-.header .item-menu .linck-item-menu {
+.header .linck-item-menu {
+  margin-left: 15px;
+  margin-right: 27px;
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
@@ -130,6 +108,26 @@ body {
 
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
+.header .linck-item-menu:hover,
+.header .linck-item-menu:focus {
+  margin-left: 0;
+  margin-right: 12px;
+  padding: 7px 15px;
+
+  color: #333;
+  border: none;
+
+  background-color: #f7f6f3;
+  border-radius: 20px;
+}
+.header .linck-item-menu:active {
+  border-radius: 20px;
+  box-shadow: inset 0px 2px 1px #696969;
+}
+.header .item-menu:hover .list-sub-menu,
+.header .item-menu:focus .list-sub-menu {
+  display: block;
+}
 .header .list-sub-menu {
   display: none;
 
@@ -137,7 +135,7 @@ body {
   padding: 0;
 
   position: absolute;
-  top: 52px;
+  top: 33px;
   left: 0;
 
   list-style: none;
@@ -338,9 +336,13 @@ body {
   line-height: 24px;
   border-radius: 25px;
 }
+.header .sing-user {
+  position: absolute;
+  top: 131px;
+  left: 141px;
+}
 .header .link-user,
 .header .link-check-in {
-  display: block;
   margin-top: 6px;
 
   font-weight: 400;
@@ -351,10 +353,14 @@ body {
 
   border-bottom: 1px solid #adacaa;
 }
-.header .sing-user {
-  position: absolute;
-  top: 131px;
-  left: 141px;
+.header .link-user:hover,
+.header .link-user:focus,
+.header .link-user:active,
+.header .link-check-in:hover,
+.header .link-check-in:focus,
+.header .link-check-in:active {
+  color: #e84d37;
+  border-color: #f9cdc4;
 }
 .header .sign:hover .sign-form {
   display: block;
@@ -582,15 +588,16 @@ body {
   box-sizing: border-box;
 }
 .catalog .product:hover {
+  margin-bottom: -70px;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.4);
 }
 .catalog .product:hover .Quick-View {
-display: block;
+  display: block;
 }
 .catalog .product:hover .product-name {
-  text-decoration: none;
+  border-bottom: 1px solid transparent;
 }
 .catalog .product-status {
   display: block;
@@ -642,19 +649,27 @@ display: block;
   font-size: 30px;
 }
 .catalog .link-product-name {
+  margin: 0;
+  padding: 0;
   text-decoration: none;
   color: #fff;
 }
+.catalog .link-product-name:hover .product-name,
+.catalog .link-product-name:focus .product-name,
+.catalog .link-product-name:active .product-name {
+  color: rgb(255, 188, 158);
+  border-bottom: 1px solid rgba(255, 188, 158, 0.5);
+}
 .catalog .product-name {
+  display: inline;
   margin: 0;
   padding: 0;
-
-  width: 260px;
 
   font-size: 16px;
   line-height: 22px;
   font-weight: 500;
   text-align: center;
+
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 .catalog .Quick-View  {
@@ -669,9 +684,10 @@ display: block;
   border-radius: 50px;
 }
 .advantage {
+  margin-top: 40px;
+  margin-bottom: 40px;
   padding: 27px;
   padding-left: 20px;
-  margin-bottom: 40px;
   box-sizing: border-box;
 
   border-radius: 20px;
@@ -833,11 +849,11 @@ display: block;
 .map {
   position: relative;
   margin-top: 40px;
-  height: 430px;
-  overflow: hidden;
+
 }
 .map .map-img {
-  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .map .contact-information {
   padding: 25px 30px;
