@@ -390,6 +390,9 @@ body {
 .header .sign:hover .sign-form {
   display: block;
 }
+.header .basket-conteiner {
+  position: relative;
+}
 .header .basket {
   display: inline-block;
   padding-top: 9px;
@@ -437,8 +440,90 @@ body {
 .header .basket:focus polygon {
    fill: #E84D37;
 }
-.header .order {
+.header .basket-conteiner:hover .order,
+.header .basket-conteiner:focus .order {
+  display: block;
+}
+.header .basket-conteiner .order {
   display: none;
+  padding: 20px 14px;
+  position: absolute;
+  left: -420px;
+  top: 38px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.header .basket-conteiner .list-order {
+  margin: 0;
+  border-bottom: 1px solid #cacac7;
+  padding: 0;
+}
+.header .basket-conteiner .item-order {
+  display: flex;
+  margin-bottom: 20px;
+}
+.header .basket-conteiner .close-up {
+  position: relative;
+  left: 4px;
+  top: 10px;
+
+  overflow: visible;
+  width: 5px;
+  height: 5px;
+}
+.header .basket-conteiner .img-order {
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  display: block;
+  margin-left: 40px;
+  margin-top: -5px;
+}
+.header .basket-conteiner .name-order {
+  margin-left: 15px;
+  margin-right: 34px;
+  width: 217px;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #323232;
+}
+.header .basket-conteiner .order-quantity {
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #323232;
+}
+.header .basket-conteiner .order-price {
+  margin-left: 3px;
+  margin-right: 25px;
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #cccbca;
+}
+.header .basket-conteiner .order-amount {
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #323232;
+}
+.header .basket-conteiner .order-totals {
+  margin-left: 78%;
+  margin-top: 16px;
+
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 700;
+  color: #323232;
+}
+.header .basket-conteiner .ordering {
+  display: block;
+  padding: 8px 14px;
+  margin-top: 13px;
+  margin-left: 66%;
+
+  border-radius: 50px;
 }
 .header .contact-header{
   display: flex;
@@ -458,6 +543,9 @@ body {
 .header .contact-tel {
   font-size: 22px;
   line-height: 24px;
+}
+.border-bottom {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 .slider {
   display: flex;
@@ -1159,12 +1247,23 @@ body {
   color: #fff;
 }
 .feedback {
-  display: none;
-  position: fixed;
-  top: 20%;
-  left: 30%;
-  z-index: 5;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.feedback .feedback-user {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translatex(-50%);
 
+  z-index: 5;
+  flex-direction: column;
   padding-left: 25px;
   padding-right: 25px;
   padding-top: 18px;
@@ -1179,10 +1278,6 @@ body {
   line-height: 28px;
   font-weight: 500;
 }
-.feedback .feedback-user {
-  display: flex;
-  flex-direction: column;
-}
 .feedback .user-name,
 .feedback .user-email,
 .feedback .user-comment {
@@ -1191,7 +1286,7 @@ body {
 }
 .feedback .user-name input[type="text"],
 .feedback .user-email input[type="email"],
-.feedback .user-comment input[type="text"] {
+.feedback .user-comment textarea {
   margin-bottom: 20px;
   padding: 14px 16px;
   width: 60%;
@@ -1209,22 +1304,22 @@ body {
 .feedback .user-name input[type="text"] {
   margin-top: 25px;
 }
-.feedback .user-comment input[type="text"] {
+.feedback .user-comment textarea {
   width: 100%;
   height: 155px;
 }
 .feedback .user-name input[type="text"]:hover,
 .feedback .user-email input[type="email"]:hover,
-.feedback .user-comment input[type="text"]:hover,
+.feedback .user-comment textarea:hover,
 .feedback .user-name input[type="text"]:focus,
 .feedback .user-email input[type="email"]:focus,
-.feedback .user-comment input[type="text"]:focus {
+.feedback .user-comment textarea:focus {
   padding: 13px 15px;
   border: 2px solid #c7c6c5;
 }
 .feedback .user-name input[type="text"]:active,
 .feedback .user-email input[type="email"]:active,
-.feedback .user-comment input[type="text"]:active {
+.feedback .user-comment textarea:active {
 padding: 13px 15px;
 border: 2px solid #8fbdec;
 border-radius: 5px;
@@ -1238,8 +1333,9 @@ border-radius: 5px;
 }
 .close-up {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 52%;
+  right: 31%;
+  z-index: 6;
 
   width: 25px;
   height: 25px;
@@ -1280,16 +1376,7 @@ border-radius: 5px;
 .close-up:active::before {
   background-color: #e84d37;
 }
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 4;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
+
 /*Недостающие стили для странице каталога*/
 .list-bread-crumbs {
   display: flex;
@@ -1400,39 +1487,17 @@ border-radius: 5px;
 
 }
 .filters .price-sorting input[type="range"] {
-  width: 100%;
-  background-color: red;
+  display: none;
 }
-.filters .price-sorting input[type="range"] {
-  -webkit-appearance: none;
-   width: 100%;
-   background: transparent;
+.filters .price-sorting .range-track {
+  position: absolute;
+  left: 23px;
+  top: 15px;
+  width: 176px;
+  height: 4px;
+  background-color: rgba(255,255,255,0.5);
 }
-.filters .price-sorting input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-}
-.filters .price-sorting input[type=range]:focus {
-  outline: none;
-}
-.filters .price-sorting input[type=range]::-ms-track {
-  width: 100%;
-  cursor: pointer;
-  background: transparent;
-  border-color: transparent;
-  color: transparent;
-}
-.filters .price-sorting input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 20px;
-  box-sizing: border-box;
-  border-radius: 50%;
-  border: 8px solid #fff;
-  background-color: transparent;
-  cursor: pointer;
-  margin-top: 0px;
-}
-.filters .price-sorting input[type=range]::-webkit-slider-thumb {
-  -webkit-appearance: none;
+.filters .price-sorting .range-thumb {
   width: 20px;
   height: 20px;
   box-sizing: border-box;
@@ -1443,38 +1508,6 @@ border-radius: 5px;
   margin-top: 0px;
   margin-left: 0px;
 }
-.filters .price-sorting input[type=range]::-moz-range-thumb {
-  -webkit-appearance: none;
-  width: 20px;
-  height: 20px;
-  box-sizing: border-box;
-  border-radius: 50%;
-  border: 8px solid #fff;
-  background-color: transparent;
-  cursor: pointer;
-  margin-top: 0px;
-  margin-left: 74px;
-}
-.filters .price-sorting input[type=range]::-ms-thumb {
-  -webkit-appearance: none;
-  width: 20px;
-  height: 20px;
-  box-sizing: border-box;
-  border-radius: 50%;
-  border: 8px solid #fff;
-  background-color: transparent;
-  cursor: pointer;
-  margin-top: 0px;
-  margin-left: 74px;
-}
-.filters .price-sorting .range-track {
-  position: absolute;
-  left: 23px;
-  top: 15px;
-  width: 176px;
-  height: 4px;
-  background-color: rgba(255,255,255,0.5);
-  }
 .filters .fats {
   margin: 0;
   padding: 0;

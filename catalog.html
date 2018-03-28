@@ -73,7 +73,7 @@
              </p>
             </form>
           </div>
-          <div>
+          <div class="basket-conteiner">
             <a href="#" class="basket">
               <svg class="img-basket not-active" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
               	 width="21px" height="20px" viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
@@ -86,20 +86,20 @@
             2 товара
           </a>
             <div class="order">
-              <ul class="order-list">
+              <ul class="list-order">
                 <li class="item-order">
-                  <button class="close-up" type="button">Закрыть</button>
-                  <img classe="img-order" src="img/1.jpg" alt="Пломбир с апельсиновым джемом">
+                  <button class="close-up " type="button">Закрыть</button>
+                  <img class="img-order" src="img/1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
                   <span class="name-order">Пломбир с апельсиновым джемом</span>
-                  <span class="order-quantity">1,5кг х</span>
+                  <span class="order-quantity">1,5кг х </span>
                   <span class="order-price"> 200 руб.</span>
                   <span class="order-amount">300 руб.</span>
                 </li>
                 <li class="item-order">
                   <button class="close-up" type="button">Закрыть</button>
-                  <img classe="img-order" src="img/3.jpg" alt="Клубничный пломбир с присыпкой из белого шоколада">
+                  <img class="img-order" src="img/3.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
                   <span class="name-order">Клубничный пломбир с присыпкой из белого шоколада</span>
-                  <span class="order-quantity">1,5кг х</span>
+                  <span class="order-quantity">1,5кг х </span>
                   <span class="order-price"> 300 руб.</span>
                   <span class="order-amount">450 руб.</span>
                 </li>
@@ -107,8 +107,9 @@
               <p class="order-totals">
                 <span class="totals-name">Итого:</span>
                 <span class="totals-amount">750 руб.</span>
-                <a class="btn ordering" href="#">Оформить заказ</a>
               </p>
+                <a class="btn ordering" href="#">Оформить заказ</a>
+
             </div>
         </div>
           <p class="contact-header">
@@ -119,7 +120,7 @@
       </div>
     </header>
 
-    <main class="wrapper">
+    <main class="wrapper border-bottom">
       <ul class="list-bread-crumbs">
         <li class="item-bread-crumbs"><a class="link-bread-crumbs" href="index.html">Главная</a></li>
         <li class="item-bread-crumbs"><a class="link-bread-crumbs" href="catalog.html">Каталог</a></li>
@@ -140,8 +141,13 @@
          </p>
          <p class="price-sorting">
            <label for="price-sorting">Цена: 100 руб. – 500 руб.</label>
-           <input type="range" id="price-sorting" name="price-sorting">
-           <span class="range-track"><span>
+           <input type="range" id="price-sorting" name="price-max">
+           <input type="range" id="price-sorting" name="price-min">
+           <div class="range-track">
+             <span class="range-track"></span>
+             <span class="range-thumb"><span>
+             <span class="range-thumb"><span>
+          </div>
          </p>
          <figure class="fats">
            <figcaption class="caption-fats">Жирность:</figcaption>
