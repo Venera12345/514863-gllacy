@@ -3,6 +3,7 @@ body {
   min-width: 900px;
   font-family: Roboto, Arial, sans-serif;
   text-transform: none;
+  overflow: visible;
 }
 .visually-hidden {
 	position: absolute;
@@ -185,6 +186,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
+  justify-content: space-between;
   width: 267px;
   margin-right: 26px;
   padding-top: 24px;
@@ -194,8 +196,6 @@ body {
   justify-content: flex-end;
 }
 .header .search {
-  margin-right: 2%;
-
   position: relative;
 }
 .header .search-button {
@@ -262,7 +262,6 @@ body {
   display: block;
 }
 .header .sign {
-  margin-right: 2%;
   position: relative;
 }
 .header .sign-button {
@@ -463,13 +462,14 @@ body {
   margin-bottom: 20px;
 }
 .header .basket-conteiner .close-up {
-  position: relative;
-  left: 4px;
-  top: 10px;
-
-  overflow: visible;
-  width: 5px;
-  height: 5px;
+  overflow: hidden;
+  width: 22px;
+  height: 21px;
+  top: 21px;
+  left: 18px;
+}
+.header .basket-conteiner .second {
+  top: 69px;
 }
 .header .basket-conteiner .img-order {
   width: 33px;
@@ -1085,6 +1085,7 @@ body {
   width: calc(100% / 4 - 26px);
 
   margin: 0;
+  margin-left: 13px;
   padding: 0;
 
   list-style: none;
@@ -1217,6 +1218,7 @@ body {
 }
 .footer .copyright {
   margin: 0px;
+  margin-right: 13px;
   padding: 0px;
 
   width: calc(100% / 4 - 26px);
@@ -1227,9 +1229,8 @@ body {
 }
 .footer .link-copyright {
   color: #fff;
-  text-decoration: none;
-
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.5);
 }
 .footer .link-copyright:hover,
 .footer .link-copyright:focus,
@@ -1247,7 +1248,8 @@ body {
   color: #fff;
 }
 .feedback {
-  position: absolute;
+  display: none;
+  position: fixed;
   width: 100%;
   height: 100%;
   z-index: 4;
@@ -1260,7 +1262,7 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translatex(-50%);
+  transform: translate(-50%, -50%);
 
   z-index: 5;
   flex-direction: column;
@@ -1333,8 +1335,8 @@ border-radius: 5px;
 }
 .close-up {
   position: absolute;
-  top: 52%;
-  right: 31%;
+  top: 10px;
+  right: 10px;
   z-index: 6;
 
   width: 25px;
@@ -1376,8 +1378,23 @@ border-radius: 5px;
 .close-up:active::before {
   background-color: #e84d37;
 }
-
+.show {
+  display: block;
+}
 /*Недостающие стили для странице каталога*/
+.header .item-menu .current {
+  background-color: #d07058;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+}
+.header .linck-sub-menu .current {
+  color: #fff;
+}
+.header .list-sub-menu .current {
+  background-color: #d07058;
+  color: #fff;
+}
 .list-bread-crumbs {
   display: flex;
   margin: 0;
@@ -1469,9 +1486,19 @@ border-radius: 5px;
   color: #000;
 }
 .filters .price-sorting  {
+
+}
+.filters .price-sorting label {
+  margin-top: 11px;
+}
+.filters .price-sorting input[type="number"] {
+  display: none;
+}
+.filters .price-sorting .number-img {
+  display: block;
   position: relative;
-  margin-top: 20px;
-  padding: 5px 14px;
+  margin-top: 8px;
+  padding: 14px 14px;
   width: 219px;
 
   box-sizing: border-box;
@@ -1480,24 +1507,18 @@ border-radius: 5px;
   background-color: rgba(255,255,255,0.2);
   border-radius: 50px;
 }
-.filters .price-sorting label {
-  position: absolute;
-  top: -22px;
-  left: 4px;
-
-}
-.filters .price-sorting input[type="range"] {
-  display: none;
-}
-.filters .price-sorting .range-track {
-  position: absolute;
-  left: 23px;
-  top: 15px;
+.filters .price-sorting .numbe-track {
+  display: block;
+  margin-top: 2px;
+  margin-left: 8px;
   width: 176px;
   height: 4px;
   background-color: rgba(255,255,255,0.5);
 }
-.filters .price-sorting .range-thumb {
+.filters .price-sorting .numbe-thumb {
+  position: absolute;
+  top: 8px;
+  left: 35px;
   width: 20px;
   height: 20px;
   box-sizing: border-box;
@@ -1507,6 +1528,9 @@ border-radius: 5px;
   cursor: pointer;
   margin-top: 0px;
   margin-left: 0px;
+}
+.filters .price-sorting .right {
+  left: 123px;
 }
 .filters .fats {
   margin: 0;
@@ -1653,7 +1677,7 @@ border-radius: 5px;
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
-  color: #fff;;
+  color: #fff;
 
   background-color: rgba(255,255,255,0.2);
   border: 2px solid #fff;
@@ -1713,4 +1737,12 @@ border-radius: 5px;
   color: #000;
   background-color: #fff;
   border-radius: 50%;
+}
+@media (max-width: 960px) {
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
 }
