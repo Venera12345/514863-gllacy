@@ -6,7 +6,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
   <link href="css/normalaz.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.mini.css" rel="stylesheet">
 </head>
 
 <body class="fon-1">
@@ -99,27 +99,22 @@
 
     <div class="wrapper">
       <section class="slider">
-        <ul class="list-sliders">
-          <li class="item-slide slide-1">
+        <ul class="list-sliders" id="slidr-ul">
+          <li data-slidr="one">
             <img class="img-slide" src="img/Group1.png" alt="Крем-брюле и пломбир с малиновым джемом">
             <h3 class="name-slide">Крем-брюле и пломбир с малиновым джемом</h3>
             <a class="both-slide btn" href="#">Давайте оба!</a>
           </li>
-          <li class="item-slider slide-2">
+          <li data-slidr="two">
             <img class="img-slide" src="img/Group2.png" alt="Шоколадный пломбир и лимонный сорбет">
             <h3 class="name-slide">Шоколадный пломбир и лимонный сорбет</h3>
             <a class="both-slide btn" href="#">Давайте оба!</a>
           </li>
-          <li class="item-slider slide-3">
+          <li data-slidr="three">
             <img class="img-slide" src="img/Group3.png" alt="Пломбир с помадкой и клубничный щербет">
             <h3 class="name-slide">Пломбир с помадкой и клубничный щербет</h3>
             <a class="both-slide btn" href="#">Давайте оба!</a>
           </li>
-        </ul>
-        <ul class="list-button-slide">
-          <li class="item-button-slide active"><button class="button-none" type="button"></button></li>
-          <li class="item-button-slide"><button class="button-none" type="button"></button></li>
-          <li class="item-button-slide"><button class="button-none" type="button"></button></li>
         </ul>
       </section>
       <section class="sentence">
@@ -307,6 +302,8 @@
       <button class="close-up" type="button">Закрыть</button>
     </form>
   </section>
+  <script src="js/slider.min.js"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
