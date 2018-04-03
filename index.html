@@ -3,19 +3,25 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
   <link href="css/normalaz.min.css" rel="stylesheet">
-  <link href="css/style.min.css" rel="stylesheet">
-</head>
+  <link href="css/style.css" rel="stylesheet">
+  <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.pixlayout.0.9.7.js"></script>
+<script type="text/javascript">
+  $(function(){
+    $.pixlayout({clip: true, src: "gllacy-index-900.jpg", show:true, center:true, top:0, left:0, pervious: false});
+});
+</script>
 
+</head>
 <body class="fon-1">
   <header class="header wrapper">
     <div class="row">
       <div class="left-side">
         <nav class="cite-navigation container">
           <a href="/" class="logo">
-             <img src="img/logo.svg" alt="logo" class="logo-img" width="158">
+             <img src="img/logo.svg" alt="logo" class="logo-img" width="158" height="64">
             </a>
           <ul class="list-menu">
             <li class="item-menu"><a href="#" class="linck-item-menu">Каталог</a>
@@ -44,8 +50,8 @@
               </svg>
             </button>
           <form action="#" method="get" class="search-form">
-            <label class="visually-hidden">Что ищем?</label>
-            <input type="text" name="search" placeholder="Что ищем?">
+            <label class="name-search" for="search">Поиск</label>
+            <input type="text" name="search" placeholder="Что ищем?" id="search">
           </form>
         </div>
         <div class="sign">
@@ -60,11 +66,11 @@
             </a>
           <form class="sign-form" method="post" action="#">
             <p class="sign-email">
-              <label class="visually-hidden" for="email-sign">Электронная почта</label>
+              <label class="name-email" for="email-sign">Электронная почта</label>
               <input type="email" id="email-sign" name="email" placeholder="Электронная почта">
               <p>
                 <p class="sign-pass">
-                  <label class="visually-hidden" for="pass">Пароль</label>
+                  <label class="name-password" for="pass">Пароль</label>
                   <input type="password" id="pass" name="password" placeholder="Пароль">
                 </p>
                 <button class="btn sign-submit" type="submit">Войти</button>
@@ -74,7 +80,7 @@
                 </p>
           </form>
         </div>
-        <div>
+        <div class="basket-conteiner">
           <a href="#" class="basket">
              <svg class="img-basket" version="1.1" x="0px" y="0px"
             	 width="21px" height="20px" viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
@@ -94,33 +100,35 @@
     </div>
   </header>
   <main>
-
     <h1 class="visually-hidden">Gllasy-shop</h1>
-
     <div class="wrapper">
       <section class="slider">
         <ul class="list-sliders" id="slidr-ul">
           <li data-slidr="one">
-            <img class="img-slide" src="img/Group1.png" alt="Крем-брюле и пломбир с малиновым джемом" width="1045">
-            <h3 class="name-slide">Крем-брюле и пломбир с малиновым джемом</h3>
-            <a class="both-slide btn" href="#">Давайте оба!</a>
+            <img class="img-slide" src="img/Group1.png" alt="Крем-брюле и пломбир с малиновым джемом" width="1045" height="854">
+            <div class="bottom-name-slider">
+              <h3 class="name-slide">Крем-брюле и пломбир с малиновым джемом</h3>
+              <a class="both-slide btn" href="#">Давайте оба!</a>
+            </div>
           </li>
           <li data-slidr="two">
-            <img class="img-slide" src="img/Group2.png" alt="Шоколадный пломбир и лимонный сорбет" width="1065">
-            <h3 class="name-slide">Шоколадный пломбир и лимонный сорбет</h3>
-            <a class="both-slide btn" href="#">Давайте оба!</a>
+            <img class="img-slide" src="img/Group2.png" alt="Шоколадный пломбир и лимонный сорбет" width="1045" height="854">
+            <div class="bottom-name-slider">
+              <h3 class="name-slide">Шоколадный пломбир и лимонный сорбет</h3>
+              <a class="both-slide btn" href="#">Давайте оба!</a>
+            </div>
           </li>
           <li data-slidr="three">
-            <img class="img-slide" src="img/Group3.png" alt="Пломбир с помадкой и клубничный щербет" width="1079">
-            <h3 class="name-slide">Пломбир с помадкой и клубничный щербет</h3>
-            <a class="both-slide btn" href="#">Давайте оба!</a>
+            <img class="img-slide" src="img/Group3.png" alt="Пломбир с помадкой и клубничный щербет" width="1045" height="854">
+            <div class="bottom-name-slider">
+              <h3 class="name-slide">Пломбир с помадкой и клубничный щербет</h3>
+              <a class="both-slide btn" href="#">Давайте оба!</a>
+           </div>
           </li>
         </ul>
       </section>
       <section class="sentence">
-
         <h2 class="visually-hidden">Выгодные предложение</h2>
-
         <ul class="list-sentences row">
           <li class="item-sentence">
             <h3 class="name-sentence">Малинка даром!</h3>
@@ -135,16 +143,14 @@
         </ul>
       </section>
       <section class="catalog">
-
         <h2 class="visually-hidden">Галерея</h2>
-
         <ul class="list-products row">
           <li class="item-product">
             <article class="product">
               <div class="position-prise">
                 <a class="link-img-product" href="catalog.html">
                   <span class="product-status">ХИТ</span>
-                  <img class="img-product" src="img/1.jpg" alt="Сливочное с апельсиновым джемом" width="267">
+                  <img class="img-product" src="img/1.jpg" alt="Сливочное с апельсиновым джемом" width="267" height="267">
                  </a>
                 <p class="product-prise">
                   <span class="product-amount">310 ₽</span>
@@ -160,7 +166,7 @@
               <div class="position-prise">
                 <a class="link-img-product" href="catalog.html">
                   <span class="product-status">ХИТ</span>
-                  <img class="img-product" src="img/2.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267">
+                  <img class="img-product" src="img/2.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
                  </a>
                 <p class="product-prise">
                   <span class="product-amount">380 ₽</span>
@@ -176,7 +182,7 @@
               <div class="position-prise">
                 <a class="link-img-product" href="catalog.html">
                   <span class="product-status">ХИТ</span>
-                  <img class="img-product" src="img/3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада"  width="267">
+                  <img class="img-product" src="img/3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада"  width="267" height="267">
                  </a>
                 <p class="product-prise">
                   <span class="product-amount">355 ₽</span>
@@ -192,7 +198,7 @@
               <div class="position-prise">
                 <a class="link-img-product" href="catalog.html">
                   <span class="product-status">ХИТ</span>
-                  <img class="img-product" src="img/4.jpg" alt="Сливочное крем-брюле с карамельной подливкой"  width="267">
+                  <img class="img-product" src="img/4.jpg" alt="Сливочное крем-брюле с карамельной подливкой"  width="267" height="267">
                  </a>
                 <p class="product-prise">
                   <span class="product-amount">415 ₽</span>
@@ -206,9 +212,7 @@
         </ul>
       </section>
       <section class="advantage">
-
         <h2 class="visually-hidden">Преимущества</h2>
-
         <h3 class="name-advantage">Магазин Глейси — это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h3>
         <ul class="list-advantage">
           <li class="item-advantage">
@@ -235,8 +239,8 @@
             <h2 class="visually-hidden">Подписка</h2>
             <p class="desctiption-subscription">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)</p>
             <form class="subscription-user" method="post" action="#">
-              <label class="visually-hidden">Электронная почта</label>
-              <input type="email" name="email" placeholder="Электронная почта">
+              <label class="name-email" for="subscription-email">Электронная почта</label>
+              <input type="email" name="email" id="subscription-email" placeholder="Электронная почта">
               <button class="btn subscription-dispatch" type="submit">Отправить</button>
             </form>
           </div>
@@ -244,10 +248,8 @@
       </div>
     </div>
     <section class="map">
-
       <h2 class="visually-hidden">Карта</h2>
-
-      <img class="map-img" src="img/map.png" alt="Адрес главного офиса и офлайн магазина: ул. Большая Конюшенная 19/8, Санкт-Петербург" width="1250">
+      <img class="map-img" src="img/map.png" alt="Адрес главного офиса и офлайн магазина: ул. Большая Конюшенная 19/8, Санкт-Петербург" width="1250" height="640">
       <div class="contact-information">
         <p class="info-map">Адрес главного офиса и офлайн-магазина:
           <strong class="important-text address">ул. Большая Конюшенная 19/8, Санкт-Петербург</strong> Для заказов по телефону:
@@ -272,7 +274,7 @@
         <li class="menu-item"><a class="menu-link" href="about-company.html">Экологические стандарты</a></li>
       </ul>
       <div class="copyright">
-        <img class="img-logo-footer" src="img/logo-htmlacademy-small.svg" alt="HTML-Academy" width="108">
+        <img class="img-logo-footer" src="img/logo-htmlacademy-small.svg" alt="HTML-Academy" width="108" height="39">
         <p class="text-copyright">
           Сделано в
           <a class="link-copyright" href="https://htmlacademy.ru"> HTML Academy </a> © 2017
@@ -281,17 +283,15 @@
     </div>
   </footer>
   <section class="feedback">
-
     <h2 class="visually-hidden">Обратная связь</h2>
-
     <form class="feedback-user" method="post" action="#">
       <b class="feedback-slogan">Мы обязательно вам ответим!</b>
       <p class="user-name">
-        <label class="visually-hidden">Как вас зовут?</label>
+        <label class="name-user-name" for="user-name">Имя</label>
         <input type="text" name="user-name" id="user-name" placeholder="Как вас зовут?">
       </p>
       <p class="user-email">
-        <label class="visually-hidden">Ваша почта для ответа?</label>
+        <label class="name-email-feedback" for="email-feedback">Электронная почта</label>
         <input type="email" name="email" id="email-feedback" placeholder="Ваша почта для ответа?">
       </p>
       <p class="user-comment">
@@ -304,6 +304,6 @@
   </section>
   <script src="js/slider.min.js"></script>
   <script src="js/script.min.js"></script>
-</body>
 
+</body>
 </html>
