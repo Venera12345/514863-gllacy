@@ -1563,7 +1563,7 @@ border-radius: 5px;
 .price-sorting label {
   margin-left: 2px;
 }
-.price-sorting input[type="hidden"] {
+.price-sorting input[type="number"] {
   display: none;
 }
 .price-sorting .number-img {
