@@ -5,7 +5,7 @@
   <title>HTML Academy: Глейси</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
   <link href="css/normalaz.min.css" rel="stylesheet">
-  <link href="css/style.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="fon-1">
   <header class="header wrapper">
@@ -95,28 +95,33 @@
     <h1 class="visually-hidden">Gllasy-shop</h1>
     <div class="wrapper">
       <section class="slider">
-        <ul class="list-sliders" id="slidr-ul">
-          <li data-slidr="one">
+        <ul class="list-sliders">
+          <li class="one">
             <img class="img-slide" src="img/Group1.png" alt="Крем-брюле и пломбир с малиновым джемом" width="1045" height="854">
             <div class="bottom-name-slider">
               <h3 class="name-slide">Крем-брюле и пломбир с малиновым джемом</h3>
               <a class="both-slide btn" href="#">Давайте оба!</a>
             </div>
           </li>
-          <li data-slidr="two">
+          <li class="two">
             <img class="img-slide" src="img/Group2.png" alt="Шоколадный пломбир и лимонный сорбет" width="1045" height="854">
             <div class="bottom-name-slider">
               <h3 class="name-slide">Шоколадный пломбир и лимонный сорбет</h3>
               <a class="both-slide btn" href="#">Давайте оба!</a>
             </div>
           </li>
-          <li data-slidr="three">
+          <li class="three">
             <img class="img-slide" src="img/Group3.png" alt="Пломбир с помадкой и клубничный щербет" width="1045" height="854">
             <div class="bottom-name-slider">
               <h3 class="name-slide">Пломбир с помадкой и клубничный щербет</h3>
               <a class="both-slide btn" href="#">Давайте оба!</a>
            </div>
           </li>
+        </ul>
+        <ul class="list-breadcrumbs">
+          <li class="item-breadcrumb active"></li>
+          <li class="item-breadcrumb"></li>
+          <li class="item-breadcrumb"></li>
         </ul>
       </section>
       <section class="sentence">
@@ -142,7 +147,7 @@
               <div class="position-prise">
                 <a class="link-img-product" href="catalog.html">
                   <span class="product-status">ХИТ</span>
-                  <img class="img-product" src="img/1.jpg" alt="Сливочное с апельсиновым джемом" width="267" height="267">
+                  <img class="img-product" src="img/1.jpg" alt="Сливочное с апельсиновым джемом">
                  </a>
                 <p class="product-prise">
                   <span class="product-amount">310 ₽</span>
@@ -158,7 +163,7 @@
               <div class="position-prise">
                 <a class="link-img-product" href="catalog.html">
                   <span class="product-status">ХИТ</span>
-                  <img class="img-product" src="img/2.jpg" alt="Сливочно-кофейное с кусочками шоколада" width="267" height="267">
+                  <img class="img-product" src="img/2.jpg" alt="Сливочно-кофейное с кусочками шоколада">
                  </a>
                 <p class="product-prise">
                   <span class="product-amount">380 ₽</span>
@@ -174,7 +179,7 @@
               <div class="position-prise">
                 <a class="link-img-product" href="catalog.html">
                   <span class="product-status">ХИТ</span>
-                  <img class="img-product" src="img/3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада"  width="267" height="267">
+                  <img class="img-product" src="img/3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада">
                  </a>
                 <p class="product-prise">
                   <span class="product-amount">355 ₽</span>
@@ -190,7 +195,7 @@
               <div class="position-prise">
                 <a class="link-img-product" href="catalog.html">
                   <span class="product-status">ХИТ</span>
-                  <img class="img-product" src="img/4.jpg" alt="Сливочное крем-брюле с карамельной подливкой"  width="267" height="267">
+                  <img class="img-product" src="img/4.jpg" alt="Сливочное крем-брюле с карамельной подливкой">
                  </a>
                 <p class="product-prise">
                   <span class="product-amount">415 ₽</span>
@@ -295,8 +300,6 @@
       <button class="close-up" type="button">Закрыть</button>
     </form>
   </section>
-  <script src="js/slider.min.js"></script>
-  <script src="js/script.min.js"></script>
 
 </body>
 </html>
