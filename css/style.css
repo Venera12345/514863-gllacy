@@ -52,12 +52,18 @@ label[class^="name"] {
 }
 .fon-1 {
   background-color: #849d8f;
+  background-image: url("../img/background.png");
+  background-repeat: no-repeat;
 }
 .fon-2 {
   background-color: #8996a6;
+  background-image: url("../img/background2.png");
+  background-repeat: no-repeat;
 }
 .fon-3 {
   background-color: #9d8b84;
+  background-image: url("../img/background3.png");
+  background-repeat: no-repeat;
 }
 .wrapper {
   max-width: 1200px;
@@ -646,9 +652,21 @@ label[class^="name"] {
   position: relative;
   z-index: 0;
 }
+.slider .one,
 .slider .two,
 .slider .three {
   display: none;
+}
+.slider .show {
+  display: block;
+  animation-name: change-slide;
+  animation-duration: 0.2s;
+}
+@keyframes change-slide {
+  0% {transform: scale(0); }
+  20% {transform: translateX(0.4); }
+  60% {transform: translateX(0.8); }
+  100% {transform: translateX(1); }
 }
 .slider .list-breadcrumbs {
   display: flex;
@@ -657,7 +675,7 @@ label[class^="name"] {
   left: 0px;
   list-style: none;
 }
-.slider .item-breadcrumb{
+.slider .item-breadcrumb {
   width: 18px;
   height: 18px;
   margin: 4px;
@@ -665,6 +683,10 @@ label[class^="name"] {
   border: 2px solid #fff;
   border-radius: 50%;
   box-sizing: border-box;
+  background-color: transparent;
+}
+.slider .img-slide {
+  margin-top: 85px;
 }
 .slider .item-breadcrumb:hover {
   background-color: rgba(255, 255, 255, 0.5);
@@ -745,7 +767,7 @@ label[class^="name"] {
   display: none;
 }
 .sentence {
-  margin-top: -209px;
+  margin-top: -20px;
   position: relative;
   z-index: 1;
 }
@@ -1433,15 +1455,46 @@ label[class^="name"] {
 .feedback {
   display: none;
   position: fixed;
+  z-index: 4;
+  top: 50%;
+  left: 50%;
+}
+.background {
+  display: none;
+}
+.show-background {
+  display: block;
+  position: fixed;
   width: 100%;
   height: 100%;
-  z-index: 4;
+  z-index: 3;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.feedback--active {
+.show {
   display: block;
+  animation-name: bump;
+  animation-duration: 0.5s;
+}
+.error {
+  animation-name: error;
+  animation-duration: 0.5s;
+}
+@keyframes error {
+  0% {transform: translateX(-20px);}
+  20% {transform: translateX(20px);}
+  40% {transform: translateX(-20px);}
+  60% {transform: translateX(20px);}
+  80% {transform: translateX(-20px);}
+  100% {transform: translateY(0px);}
+}
+@keyframes bump {
+  0% {transform: translateY(-2000px);}
+  40% {transform: translateY(-150px);}
+  60% {transform: translateY(100px);}
+  80% {transform: translateY(-50px);}
+  100% {transform: translateY(0px);}
 }
 .feedback .feedback-user {
   display: -webkit-box;
