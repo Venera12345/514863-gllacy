@@ -7,7 +7,7 @@
   <link href="css/normalaz.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
-<body class="fon fon-1">
+<body class="fon-1 fon-shine-1" id="fon">
   <header class="header wrapper">
     <div class="row">
       <div class="left-side">
@@ -77,12 +77,25 @@
              <svg class="img-basket" version="1.1" x="0px" y="0px"
             	 width="21px" height="20px" viewBox="0 0 21 20" enable-background="new 0 0 21 20" xml:space="preserve">
                <path fill="#FFFFFF" d="M5.657,2.031L5.422,0H0v2h3.64l1.5,13h13.988l1.699-12.969H5.657z M17.372,13H6.922L5.888,4.031h12.66
-             		L17.372,13z"/>
+                 L17.372,13z"/>
+              <polygon fill="none" points="5.888,4.031 6.922,13 17.372,13 18.548,4.031 "/>
              	<circle fill="#FFFFFF" cx="6.984" cy="18" r="2"/>
              	<circle fill="#FFFFFF" cx="15.984" cy="18" r="2"/>
             </svg>
-            Пусто
+            <span class="basket-text">Пусто</span>
           </a>
+          <div class="order">
+            <p class="slogan-add">
+              Корзина пуста!
+              </p>
+            <ul class="list-order">
+            </ul>
+            <p class="order-totals">
+              <span class="totals-name">Итого:</span>
+              <span class="totals-amount">750 руб.</span>
+            </p>
+            <a class="btn ordering" href="#">Оформить заказ</a>
+          </div>
         </div>
         <p class="contact-header">
           <span class="contact-time">С 10 до 20, ежедневно</span>
@@ -96,21 +109,21 @@
     <div class="wrapper">
       <section class="slider">
         <ul class="list-sliders">
-          <li class="one show">
+          <li class="show">
             <img class="img-slide" src="img/slider1.png" alt="Крем-брюле и пломбир с малиновым джемом" width="650" height="590">
             <div class="bottom-name-slider">
               <h3 class="name-slide">Крем-брюле и пломбир с малиновым джемом</h3>
               <a class="both-slide btn" href="#">Давайте оба!</a>
             </div>
           </li>
-          <li class="two">
+          <li>
             <img class="img-slide" src="img/slider2.png" alt="Шоколадный пломбир и лимонный сорбет" width="650" height="590">
             <div class="bottom-name-slider">
               <h3 class="name-slide">Шоколадный пломбир и лимонный сорбет</h3>
               <a class="both-slide btn" href="#">Давайте оба!</a>
             </div>
           </li>
-          <li class="three">
+          <li>
             <img class="img-slide" src="img/slider3.png" alt="Пломбир с помадкой и клубничный щербет" width="650" height="590">
             <div class="bottom-name-slider">
               <h3 class="name-slide">Пломбир с помадкой и клубничный щербет</h3>
@@ -119,9 +132,9 @@
           </li>
         </ul>
         <ul class="list-breadcrumbs">
-          <li class="item-breadcrumb first-breadcrumb active"></li>
-          <li class="item-breadcrumb second-breadcrumb"></li>
-          <li class="item-breadcrumb third-breadcrumb"></li>
+          <li class="item-breadcrumb show-background-white"></li>
+          <li class="item-breadcrumb"></li>
+          <li class="item-breadcrumb"></li>
         </ul>
       </section>
       <section class="sentence">
@@ -144,14 +157,14 @@
         <ul class="list-products row">
           <li class="item-product">
             <article class="product">
-              <div class="position-prise">
+              <div class="position-price">
                 <a class="link-img-product" href="catalog.html">
                   <span class="product-status">ХИТ</span>
                   <img class="img-product" src="img/1.jpg" alt="Сливочное с апельсиновым джемом">
                  </a>
-                <p class="product-prise">
-                  <span class="product-amount">310 ₽</span>
-                  <span class="product-units">/кг</span>
+                <p class="product-price">
+                  <span class="product-amount">310</span>
+                  <span class="product-units"> ₽/кг</span>
                 </p>
               </div>
               <h3 class="product-name"><a class="product-name-link" href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
@@ -160,14 +173,14 @@
           </li>
           <li class="item-product">
             <article class="product">
-              <div class="position-prise">
+              <div class="position-price">
                 <a class="link-img-product" href="catalog.html">
                   <span class="product-status">ХИТ</span>
                   <img class="img-product" src="img/2.jpg" alt="Сливочно-кофейное с кусочками шоколада">
                  </a>
-                <p class="product-prise">
-                  <span class="product-amount">380 ₽</span>
-                  <span class="product-units">/кг</span>
+                <p class="product-price">
+                  <span class="product-amount">380</span>
+                  <span class="product-units"> ₽/кг</span>
                 </p>
               </div>
               <h3 class="product-name"><a class="product-name-link" href="#">Сливочно-кофейное с кусочками шоколада</a></h3>
@@ -176,14 +189,14 @@
           </li>
           <li class="item-product">
             <article class="product">
-              <div class="position-prise">
+              <div class="position-price">
                 <a class="link-img-product" href="catalog.html">
                   <span class="product-status">ХИТ</span>
                   <img class="img-product" src="img/3.jpg" alt="Сливочно-клубничное с присыпкой из белого шоколада">
                  </a>
-                <p class="product-prise">
-                  <span class="product-amount">355 ₽</span>
-                  <span class="product-units">/кг</span>
+                <p class="product-price">
+                  <span class="product-amount">355</span>
+                  <span class="product-units"> ₽/кг</span>
                 </p>
               </div>
               <h3 class="product-name"><a class="product-name-link" href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
@@ -192,14 +205,14 @@
           </li>
           <li class="item-product">
             <article class="product">
-              <div class="position-prise">
+              <div class="position-price">
                 <a class="link-img-product" href="catalog.html">
                   <span class="product-status">ХИТ</span>
                   <img class="img-product" src="img/4.jpg" alt="Сливочное крем-брюле с карамельной подливкой">
                  </a>
-                <p class="product-prise">
-                  <span class="product-amount">415 ₽</span>
-                  <span class="product-units">/кг</span>
+                <p class="product-price">
+                  <span class="product-amount">415</span>
+                  <span class="product-units"> ₽/кг</span>
                 </p>
               </div>
               <h3 class="product-name"><a class="product-name-link" href="#">Сливочное крем-брюле с карамельной подливкой</a></h3>
@@ -287,11 +300,11 @@
       <b class="feedback-slogan">Мы обязательно вам ответим!</b>
       <p class="user-name">
         <label class="name-user-name" for="user-name">Имя</label>
-        <input type="text" name="user-name" id="user-name" placeholder="Как вас зовут?">
+        <input type="text" name="user-name" id="user-name" placeholder="Как вас зовут?" autofocus required pattern = "^[А-Яа-яЁё\s]+$">
       </p>
       <p class="user-email">
         <label class="name-email-feedback" for="email-feedback">Электронная почта</label>
-        <input type="email" name="email" id="email-feedback" placeholder="Ваша почта для ответа?">
+        <input type="email" name="email" id="email-feedback" placeholder="Ваша почта для ответа?" required>
       </p>
       <p class="user-comment">
         <label class="visually-hidden">Напишите что-нибудь...</label>
@@ -302,7 +315,63 @@
     </form>
   </section>
   <div class="background"></div>
-  <script src="js/script.js"></script>
+
+<template id="cart-product-description">
+
+  <article class="show-product">
+   <img class="img-product-description" width="100" height="270" src="img/1.jpg" alt="Сливочное с апельсиновым джемом">
+    <div class="position-price">
+     <h3 class="product-name"></h3>
+      <p class="product-price-description">
+        <span>Цена:</span>
+        <span class="product-amount-cart">310</span>
+        <span>₽/кг</span>
+      </p>
+      <p class="product-description">
+        Сливочное мороженое полезно. Прежде всего, потому, что в нем присутствуют витамины и минералы. Здесь имеется кальций, калий и фосфор, витамины А, В и другие. Они помогают формировать костную и мышечную ткань, волосы, ногти и зубы. Известно позитивное влияние на нервную систему. Помимо того, что это самостоятельный десерт, такое мороженое употребляют с различными соусами и наполнителями. На его основе делается множество вкусных и полезных коктейлей.
+      </p>
+        <form class="product-number-kilog">
+         <span>Колличество</span>
+        <select name="weight" id="weight" onchange="document.querySelector('.cost-calculation').textContent=this.options[this.selectedIndex].value*document.querySelector('.product-amount-cart').textContent">
+          <option value="1">0</option>
+          <option value="1">1</option>
+          <option value="1.5">1.5</option>
+          <option value="2">2</option>
+          <option value="2.5">2.5</option>
+          <option value="3">3</option>
+          <option value="3.5">3.5</option>
+          <option value="4">4</option>
+          <option value="4.5">4.5</option>
+          <option value="5">5</option>
+          <option value="5.5">5.5</option>
+          <option value="6">6</option>
+        </select>
+        <span>кг</span>
+        <span>=</span>
+        <span class="cost-calculation">0</span>
+        <span>₽</span>
+        </form>
+      <button class="btn add-basket" type="button">Добавить в корзину</button> 
+      <button class="close-up" type="button">Закрыть</button> 
+    </div>
+  </article>
+   
+  </template>
+ 
+<template id="item-order-create">
+  <li class="item-order">
+      <button class="close-up" type="button">Закрыть</button>
+      <img class="img-order" src="img/1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+      <span class="name-order">Пломбир с апельсиновым джемом</span>
+      <span class="order-quantity">1,5</span>
+      <span>кг х </span> 
+      <span class="order-price">200</span>
+      <span class="order-amount">300</span>
+      <span> руб.</span>
+</li>
+</template>
+  <script src="js/script-popup-slider.js"></script>
+ <!--<script src="js/script-catalog.js"></script> -->
 
 </body>
 </html>
