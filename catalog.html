@@ -6,6 +6,9 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
   <link href="css/normalaz.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/jquery-ui.css" rel="stylesheet">
+  <script src="js/jquery-1.12.4.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
 </head>
 <body class="fon-1">
   <header class="header wrapper">
@@ -124,7 +127,14 @@
            </select>
         </p>
         <div class="price-sorting">
-          <p class="price-sorting-name">Цена:
+          <p class="price-sorting-name">
+            <label for="amount" >Цена:</label>
+            <input type="text" class="price-sorting-name"  id="amount">
+          </p>
+         <div class="wrapper-background">
+          <div id="slider-range"></div>
+          </div>
+        <!--  <p class="price-sorting-name">Цена:
             <label for="price-sorting-min" id="slide-right">100 руб.</label>
               –
             <label for="price-sorting-max">500 руб.</label>
@@ -136,7 +146,7 @@
               <span class="numbe-thumb right"></span>
               <span class="numbe-thumb left"></span>
             </p>
-          </div>
+          </div> -->
         </div>
         <figure class="fats">
           <figcaption class="caption-fats">Жирность:</figcaption>
@@ -476,8 +486,7 @@
         <span> руб.</span>
   </li>
   </template>
+   <script src="js/script-filter.js"></script>
 
- 
-    <script src="js/script-filter.js"></script>
 </body>
 </html>

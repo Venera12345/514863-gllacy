@@ -1770,8 +1770,7 @@ border-radius: 5px;
           align-items: center;
   margin-top: -5px;
 }
-.filters .sorting-user,
-.filters .price-sorting {
+.filters .sorting-user{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1786,14 +1785,23 @@ border-radius: 5px;
 
   font-size: 14px;
   line-height: 16px;
-  font-weight: 500;
+  font-weight: 400;
   color: #fff;
 }
-.filters .price-sorting {
+.filters .wrapper-background {
+  width: 200px;
   margin-right: 15px;
+  padding: 14px 13px;
+  padding-bottom: 4px;
+  margin-top: 9px;
+
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 50px;
 }
-.sorting-user label,
-.price-sorting label {
+#slider-range {
+  margin-bottom: 10px;
+}
+.sorting-user label {
   margin-left: 16px;
 }
 .sorting-user select {
@@ -1803,7 +1811,7 @@ border-radius: 5px;
 
   font-size: 16px;
   line-height: 18px;
-  font-weight: 500;
+  font-weight: 400;
   color: #fff;
   text-transform: lowercase;
 
@@ -1830,11 +1838,23 @@ border-radius: 5px;
   margin: 0;
   margin-left: 15px;
 }
-.price-sorting label {
-  margin-left: 2px;
+.price-sorting-name label {
+  padding: 0;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #fff;
+  margin-right: -5px;
 }
-.price-sorting input[type="number"] {
-  display: none;
+.price-sorting-name input[type="text"] {
+  display: inline-block;
+  width: 140px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #fff;
+  background-color: transparent;
+  border: none;
 }
 .price-sorting .number-img {
   display: block;
@@ -1887,7 +1907,7 @@ border-radius: 5px;
 
   font-size: 14px;
   line-height: 16px;
-  font-weight: 500;
+  font-weight: 400;
   color: #fff;
 }
 .fats .fats-list {
@@ -1911,7 +1931,7 @@ border-radius: 5px;
 
   font-size: 16px;
   line-height: 18px;
-  font-weight: 500;
+  font-weight: 400;
   color: #fff;
   text-transform: lowercase;
 }
@@ -1969,7 +1989,7 @@ border-radius: 5px;
   margin-left: 14px;
   font-size: 14px;
   line-height: 16px;
-  font-weight: 500;
+  font-weight: 400;
   color: #fff;
 }
 .filters .list-filler {
@@ -1979,8 +1999,8 @@ border-radius: 5px;
   margin: 0;
   margin-top: 7px;
   padding-left: 15px;
-  padding-top: 4px;
-  padding-bottom: 5px;
+  padding-top: 7px;
+  padding-bottom: 7px;
   list-style: none;
 
   background-color: rgba(255,255,255,0.2);
@@ -1992,7 +2012,7 @@ border-radius: 5px;
 .filters .filler-name {
   font-size: 16px;
   line-height: 18px;
-  font-weight: 500;
+  font-weight: 400;
   color: #fff;
   text-transform: lowercase;
   vertical-align: middle;
@@ -2051,7 +2071,7 @@ border-radius: 5px;
 
   font-size: 16px;
   line-height: 18px;
-  font-weight: 500;
+  font-weight: 400;
   color: #fff;
 
   background-color: rgba(255,255,255, 0.2);
@@ -2117,9 +2137,6 @@ border-radius: 5px;
   background-color: #fff;
   border-radius: 50%;
 }
-
-
-
 .show-product {
   
   display: flex;

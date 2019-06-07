@@ -6,13 +6,59 @@ const buttonFiter= document.querySelector('.button-filter'),
       thumbRigt = document.querySelector('.numbe-thumb'),
       slideRigt = document.querySelector('#slide-right'),
       productName = document.querySelectorAll('.product-name-link');
-let saleProduct = document.querySelectorAll('.product-amount');
+const saleProduct = document.querySelectorAll('.product-amount');
 const listFiller = document.querySelectorAll('.list-filler'),
       Shocolat = document.querySelector('#shocolat'),
       sugar = document.querySelector('#sugar'),
       fruits = document.querySelector('#fruits'),
       syrup = document.querySelector('#syrup'),
       jam = document.querySelector('#jam');
+
+function filter () {
+  buttonFiter.addEventListener('click', function () {
+    filterCheckbox ();
+    //filterCost ();
+   // filterForCost ();
+  })
+}
+filter ();
+
+/*Slider */
+ function Slider () {
+  $( "#slider-range" ).slider({
+    range: true,
+    min: 100,
+    max: 800,
+    values: [200, 500],
+    slide: function( event, ui ) {
+      $( "#amount" ).val( ui.values[ 0 ] + " руб. - " + ui.values[ 1 ]  + " руб."); 
+    },
+    stop: function( event, ui ) { 
+      $( "#slider-range" ).slider({
+        values: [ ui.values[ 0 ], ui.values[ 1 ] ]
+      })
+      var slidMin = $( "#slider-range" ).slider( "values", 0 );
+      var slidMax = $( "#slider-range" ).slider( "values", 1 );
+      console.log(slidMax, slidMin);
+      console.log($(".itemProduct"));
+      $.each($(".itemProduct"), function () {
+        console,log("перебор");
+         if (+slidMax > +slidMin) {
+console.log("ok");
+         } 
+      })
+    }
+  });
+  $( "#amount" ).val( $( "#slider-range" ).slider( "values", 0 ) +
+    " руб. - " + $( "#slider-range" ).slider( "values", 1 ) + " руб.");
+     
+};
+Slider ();
+console.log(Slider ());
+
+  let test = Slider ();
+ // console.log(test);
+  
 
 function filterCheckbox () {
   itemProduct.forEach(function (item) { 
@@ -36,7 +82,7 @@ function filterCheckbox () {
       }
      }
      if (syrup.checked){
-      if(item.textContent.indexOf('сироп') !== -1) {
+      if(item.textContent.indexOf('сироп') !== -1 || item.textContent.indexOf('подлив') !== -1) {
         itemProduct[i].classList.add('show');
       }
      }
@@ -49,18 +95,8 @@ function filterCheckbox () {
       itemProduct[i].classList.add('show');
      }
   })
- 
-
-
 }
-function filter () {
-  buttonFiter.addEventListener('click', function () {
 
-    filterCheckbox ();
-    filterForCost ();
-  })
-}
-filter ();
 function filterForCost () {
   let curent = 0;
   for (let i = 0; i < itemProduct.length - 2; i++){
@@ -139,3 +175,4 @@ buttonFiter.addEventListener('click', function (evt) {
     slideRigt.textContent = event.detail;
   })
 */
+
