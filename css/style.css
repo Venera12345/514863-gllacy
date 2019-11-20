@@ -170,6 +170,9 @@ label[class^="name"] {
   border-radius: 7px;
 }
 
+.header .flex {
+  display: flex;
+}
 .header .item-menu {
   margin: 0;
   padding: 0;
