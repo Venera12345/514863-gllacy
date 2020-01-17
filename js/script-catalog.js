@@ -13,7 +13,7 @@ window.addEventListener("load", function () {
     amoutProduct = listProducts.querySelectorAll('.product-amount'),
     nameProduct = listProducts.querySelectorAll('.product-name'),
     templateCard = document.querySelector('#cart-product-description').content,
-    templateProduct = templateCard.querySelector('.show-product'),
+    templateProduct = templateCard.querySelector('.background-position-popup'),
     buttonQuickView = document.querySelectorAll('.Quick-View'),
     crumbBasket = document.querySelector('.basket-text'),
     conteinerBasket = document.querySelector('.basket-conteiner'),
