@@ -53,7 +53,7 @@ window.addEventListener("load", function () {
     name.textContent = nameProduct[num].textContent;
     price.textContent = +amoutProduct[num].textContent;
 
-    let objectProduct = {
+    var objectProduct = {
       name: name.textContent,
       src: img.src,
       price: price.textContent
@@ -67,11 +67,11 @@ window.addEventListener("load", function () {
 
     function addItemBasket(item) {
       addBasket.addEventListener('click', function () {
-        let calcCost = item.querySelector('.cost-calculation').textContent;
+        var calcCost = item.querySelector('.cost-calculation').textContent;
         if (calcCost != 0) {
           item.remove();
           backgroundPopup.classList.remove('show-background');
-          let quantityKil = weight.options[weight.selectedIndex].value;
+          var quantityKil = weight.options[weight.selectedIndex].value;
           conteinerBasket.classList.add('polygon-active');
 
           creatItem(objectProduct, quantityKil);
@@ -94,11 +94,11 @@ window.addEventListener("load", function () {
     nameOrder.textContent = object.name;
     quantityOrder.textContent = weight;
     priceOrder.textContent = object.price;
-    let costCalc = parseInt(object.price, 10) * +weight;
+    var costCalc = parseInt(object.price, 10) * +weight;
     costOrder.textContent = costCalc;
     listOrder.appendChild(element);
-    let itemOrder = listOrder.querySelectorAll('.item-order');
-    for (let i = 0; i < itemOrder.length; i++) {
+    var itemOrder = listOrder.querySelectorAll('.item-order');
+    for (var i = 0; i < itemOrder.length; i++) {
       if (itemOrder.length = 0) {
         crumbBasket.textContent = 'Пусто';
       }
@@ -123,11 +123,11 @@ window.addEventListener("load", function () {
 
   function OpenBasket() {
     conteinerBasket.addEventListener('click', function () {
-      let itemsOrder = listOrder.children;
-      let amountOrder = listOrder.querySelectorAll('.order-amount');
-      let closeItem = listOrder.querySelectorAll('.close-up');
-      let sumTot = 0;
-      for (let i = 0; i < itemsOrder.length; i++) {
+      var itemsOrder = listOrder.children;
+      var amountOrder = listOrder.querySelectorAll('.order-amount');
+      var closeItem = listOrder.querySelectorAll('.close-up');
+      var sumTot = 0;
+      for (var i = 0; i < itemsOrder.length; i++) {
         if (itemsOrder.length > 0) {
           basketSlogan.classList.add('slogan-hidden');
           orderTotal.classList.add('order-totals-show');
@@ -135,16 +135,16 @@ window.addEventListener("load", function () {
         }
         closeItems(closeItem[i], itemsOrder[i], amountOrder[i].textContent);
       }
-      let calcTotal = orderTotal.querySelector('.totals-amount');
+      var calcTotal = orderTotal.querySelector('.totals-amount');
       calcTotal.textContent = sumTot;
-      let sumNew = sumTot;
+      var sumNew = sumTot;
 
       function closeItems(close, item, amount) {
         close.addEventListener('click', function () {
           item.remove();
           sumNew = sumNew - amount;
           calcTotal.textContent = sumNew;
-          for (let j = 0; j <= itemsOrder.length; j++) {
+          for (var j = 0; j <= itemsOrder.length; j++) {
             if (itemsOrder.length <= 0) {
               crumbBasket.textContent = 'Пусто';
               basketSlogan.classList.remove('slogan-hidden');
